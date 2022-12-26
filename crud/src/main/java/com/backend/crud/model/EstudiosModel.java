@@ -3,7 +3,7 @@ package com.backend.crud.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tbl_estudios")
+@Table(name="tbl_estudios")
 public class EstudiosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,7 +11,7 @@ public class EstudiosModel {
     @Column(length = 50,nullable = false)
     private String instituto;
     @Column(length = 50,nullable = false)
-    private String sitio;
+    private String fecha;
     @Column(length = 50,nullable = false)
     private String titulo;
     @Column(length = 150,nullable = false)
@@ -20,17 +20,17 @@ public class EstudiosModel {
     public EstudiosModel() {
     }
 
-    public EstudiosModel(long id, String instituto, String sitio, String titulo, String descripcion) {
+    public EstudiosModel(long id, String instituto, String fecha, String titulo, String descripcion) {
         this.id = id;
         this.instituto = instituto;
-        this.sitio = sitio;
+        this.fecha = fecha;
         this.titulo = titulo;
         this.descripcion = descripcion;
     }
 
-    public EstudiosModel(String instituto, String sitio, String titulo, String descripcion) {
+    public EstudiosModel(String instituto, String fecha, String titulo, String descripcion) {
         this.instituto = instituto;
-        this.sitio = sitio;
+        this.fecha = fecha;
         this.titulo = titulo;
         this.descripcion = descripcion;
     }
@@ -51,12 +51,12 @@ public class EstudiosModel {
         this.instituto = instituto;
     }
 
-    public String getSitio() {
-        return sitio;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setSitio(String sitio) {
-        this.sitio = sitio;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public String getTitulo() {

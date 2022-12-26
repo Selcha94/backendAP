@@ -33,7 +33,7 @@ public class EstudiosController {
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<Object> eliminar(@PathVariable("id") long id){
         boolean res = estudiosService.delete(id);
-        Map datos = new HashMap ();
+        Map datos = new HashMap<>();
         datos.put("mensaje","Datos eliminados con exito!");
         if(!res){
             datos.put("mensaje","No existe el registro con id: "+id);
